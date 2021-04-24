@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const User = mongoose.model("User");
+const Chatroom = mongoose.model("Chatroom")
 const sha256 = require('js-sha256');
 const jwt = require('jwt-then');
 
@@ -47,3 +48,13 @@ exports.login = async(req, res) => {
     });
 }
 
+exports.getChatrooms = async(req,res) => {
+    const {id} = req.body;
+
+    const userExists = await User.findOne({_id: id});
+    if(!userExists) throw "User doesn't exist!";
+
+    const chatrooms = await Chatroom.find({users: userExists._id});
+    
+    res.json(chatrooms);
+}
