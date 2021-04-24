@@ -1,0 +1,24 @@
+{
+  "name": "chatinstitucional-back",
+  "version": "1.0.0",
+  "description": "Proyecto Chat Institucional para INTEC",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server"
+  },
+  "engines": {
+    "node": "14.15.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "js-sha256": "^0.9.0",
+    "jwt-then": "^1.0.1",
+    "mongoose": "^5.12.5",
+    "socket.io": "^4.0.1"
+  }
+}
