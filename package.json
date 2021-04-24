@@ -4,7 +4,7 @@
   "description": "Proyecto Chat Institucional para INTEC",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server"
+    "start": "node server"
   },
   "engines": {
     "node": "14.15.1"
